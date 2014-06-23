@@ -1,0 +1,14 @@
+{
+  "name": "WBANTSDataCollector",
+  "version": "1.0.0",
+  "description": "WBANTSDataCollector",
+  "main": "server.js",
+  "author": {
+    "name": "Simon Pfeifhofer",
+    "email": "simon.pfeifhofer@gmail.com"
+  },
+  "dependencies": {
+	"express": "~4.0.0",
+	"body-parser": "~1.0.1"
+  }
+}
