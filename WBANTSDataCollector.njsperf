@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>450cf77d-1b11-4c24-bf94-43bd7cd6891a</TargetProject>
+    <FriendlyName>WBANTSDataCollector</FriendlyName>
+  </ProjectTarget>
+</ProfilingTarget>

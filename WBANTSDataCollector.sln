@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WBANTSDataCollector", "WBANTSDataCollector\WBANTSDataCollector\WBANTSDataCollector.njsproj", "{450CF77D-1B11-4C24-BF94-43BD7CD6891A}"
+EndProject
+Project("{864BB3E1-6DE1-30E8-9864-5C496B9000A7}") = "Cloud", "WBANTSDataCollector\Cloud\Cloud.ccproj", "{821167AC-3AE1-4ECD-9479-BD1496A068CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{450CF77D-1B11-4C24-BF94-43BD7CD6891A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450CF77D-1B11-4C24-BF94-43BD7CD6891A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450CF77D-1B11-4C24-BF94-43BD7CD6891A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450CF77D-1B11-4C24-BF94-43BD7CD6891A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
