@@ -1,6 +1,8 @@
 ﻿var http = require('http');
 var express    = require('express'); 
 var bodyParser = require('body-parser');
+var mongo = require('mongodb');
+
 
 var app = express(); 				// define our app using express
 app.use(bodyParser());
@@ -15,12 +17,53 @@ router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api!' });	
 });
 
+WriteError = function(res, message){
+    res.json(
+        {
+            'success' : false, 
+            'error' : message
+        }
+    );
+}
+
+WriteSuccess = function(res, id){
+    res.json(
+        {
+            'success' : true, 
+            'entryId' : id
+        }
+    );
+}
+
 router
     .route('/sensordata')
     .post(
         function(req, res){
-            var test = '123';
-            req.json({'test': test});
+           
+            // Connect to the db
+            mongo.MongoClient.connect(
+                "mongodb://wbants-mongodb.cloudapp.net:27017/sensorData", 
+                function(err, db) {
+                    if(err) { 
+                        WriteError(res, err);
+                        return;
+                    }
+                    var collection = db.collection('sensorEntry');
+                    var document = req.body;
+                    collection.insert(
+                        document, 
+                        {w: 1}, 
+                        function(err, records){
+                            if(err) { 
+                                WriteError(res, err);
+                                return;
+                            }
+                            WriteSuccess(res, records[0]._id);
+                        }
+                    );
+
+                }
+            );
         }
     );
 

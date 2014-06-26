@@ -8,7 +8,8 @@
     "email": "simon.pfeifhofer@gmail.com"
   },
   "dependencies": {
-	"express": "~4.0.0",
-	"body-parser": "~1.0.1"
+    "body-parser": "^1.0.2",
+    "express": "^4.0.0",
+    "mongodb": "^1.4.7"
   }
 }
