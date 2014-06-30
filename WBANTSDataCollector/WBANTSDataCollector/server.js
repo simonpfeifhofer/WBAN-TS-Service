@@ -14,7 +14,7 @@ var port = process.env.PORT || 8080;
 var router = express.Router(); 				// get an instance of the express Router
 
 router.get('/', function(req, res) {
-	res.json({ message: 'hooray! welcome to our api!' });	
+	res.json({ message: 'WBAN-TS Sensor-Data API!' });	
 });
 
 WriteError = function(res, message){
@@ -31,6 +31,15 @@ WriteSuccess = function(res, id){
         {
             'success' : true, 
             'entryId' : id
+        }
+    );
+}
+
+WriteSuccessResultSet = function(res, results){
+    res.json(
+        {
+            'success' : true, 
+            'results' : results
         }
     );
 }
@@ -67,6 +76,41 @@ router
         }
     );
 
+router
+    .route('/sensordata/:type?')
+    .get(
+        function(req, res){
+
+            mongo.MongoClient.connect(
+                "mongodb://wbants-mongodb.cloudapp.net:27017/sensorData", 
+                function(err, db) {
+                    if(err) { 
+                        WriteError(res, err);
+                        return;
+                    }
+                    var collection = db.collection('sensorEntry');
+                    var query = {};
+                    if(req.params.type != undefined){
+                        query = {profile: req.params.type};
+                    }
+                    collection.find(
+                        query
+                    ).toArray(
+                        function(err, records){
+                            if(err) { 
+                                WriteError(res, err);
+                                return;
+                            }
+                            WriteSuccessResultSet(res, records);
+                        }
+                    );
+
+                }
+            );
+
+        }
+     );
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
@@ -76,4 +120,4 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Magic happens on port ' + port);
+console.log('WBAN-TS Sensor-Data API started on port ' + port);
