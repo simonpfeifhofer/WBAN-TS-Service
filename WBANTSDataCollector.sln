@@ -5,7 +5,28 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WBANTSDataCollector", "WBANTSDataCollector\WBANTSDataCollector\WBANTSDataCollector.njsproj", "{450CF77D-1B11-4C24-BF94-43BD7CD6891A}"
 EndProject
-Project("{864BB3E1-6DE1-30E8-9864-5C496B9000A7}") = "Cloud", "WBANTSDataCollector\Cloud\Cloud.ccproj", "{821167AC-3AE1-4ECD-9479-BD1496A068CC}"
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Cloud", "WBANTSDataCollector\Cloud\Cloud.ccproj", "{821167AC-3AE1-4ECD-9479-BD1496A068CC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WBANTSDataPresenter(1)", "http://localhost:53441", "{33DB6CF0-76C6-4148-A375-68A5768316D7}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53441"
+		Debug.AspNetCompiler.PhysicalPath = "WBANTSDataCollector\WBANTSDataPresenter\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53441\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53441"
+		Release.AspNetCompiler.PhysicalPath = "WBANTSDataCollector\WBANTSDataPresenter\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53441\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "WBANTSDataCollector\WBANTSDataPresenter\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +42,10 @@ Global
 		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{821167AC-3AE1-4ECD-9479-BD1496A068CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DB6CF0-76C6-4148-A375-68A5768316D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DB6CF0-76C6-4148-A375-68A5768316D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DB6CF0-76C6-4148-A375-68A5768316D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DB6CF0-76C6-4148-A375-68A5768316D7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
