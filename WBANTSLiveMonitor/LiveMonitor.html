@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WBANTS Live-Monitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Custom -->
+    <link href="css/custom.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/chartJS/Chart.js"></script>
+    <script src="js/custom/map.js"></script>
+    <script src="js/custom/chart.js"></script>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-2">
+                <img class="img-responsive" src="img/Logo.png" />
+            </div>
+            <div class="col-xs-7">
+                <h1>
+                    WBANTS - Live Monitor
+                </h1>
+            </div>
+        </div>
+
+        <div class="row rowseperator">
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div id="map" class="map">
+
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                
+                <div class="container">
+
+                    <!--Person 1-->
+                    <div class="row">
+                        
+                        <!--Person 1-->
+                        <div class="container">
+
+                            <div class="row">
+
+                                <!--Name-->
+                                <div class="col-xs-3">
+                                    <h3>Simon Pfeifhofer</h3>
+                                </div>
+
+                                <!--Sensors-->
+                                <div class="col-xs-1">
+                                    <img class="img-responsive" src="img/heart.png"/>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <canvas id="chart" class="col-xs-4">
+                                    
+                                </canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--Person 2-->
+                    <div class="row">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
