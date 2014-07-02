@@ -3,15 +3,20 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 
-
 var app = express(); 				// define our app using express
 app.use(bodyParser());
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+app.use(allowCrossDomain);
+
 var port = process.env.PORT || 8080;
 
-// ROUTES FOR OUR API
-// =============================================================================
-var router = express.Router(); 				// get an instance of the express Router
+var router = express.Router();
 
 router.get('/', function(req, res) {
 	res.json({ message: 'WBAN-TS Sensor-Data API!' });	
