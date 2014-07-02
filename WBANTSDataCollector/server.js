@@ -77,7 +77,7 @@ router
     );
 
 router
-    .route('/sensordata/:type?')
+    .route('/sensordata/:type?/:limit?')
     .get(
         function(req, res){
 
@@ -93,9 +93,16 @@ router
                     if(req.params.type != undefined){
                         query = {profile: req.params.type};
                     }
-                    collection.find(
-                        query
-                    ).toArray(
+                    var limit = 0;
+                    if(req.params.limit != undefined){
+                        limit = parseInt(req.params.limit);
+                    }
+                    collection
+                    .find(query)
+                    .sort({timestamp:-1})
+                    .limit(limit)
+                    .sort({timestamp:1})
+                    .toArray(
                         function(err, records){
                             if(err) { 
                                 WriteError(res, err);

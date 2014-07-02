@@ -102,6 +102,7 @@
     <Content Include="js\chartJS\src\Chart.PolarArea.js" />
     <Content Include="js\chartJS\src\Chart.Radar.js" />
     <Content Include="js\custom\chart.js" />
+    <Content Include="js\custom\serviceAdapter.js" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap.css.map" />
